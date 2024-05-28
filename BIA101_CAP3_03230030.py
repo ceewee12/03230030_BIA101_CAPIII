@@ -54,7 +54,7 @@ class SumCalculator:
 # Main function
 def main():
     # Assuming input file
-    input_file = "030.txt"
+    input_file = "03230030_BIA101_CAPIII\\030.txt"
     calculator = SumCalculator(input_file)
     calculator.print_solution()
 
