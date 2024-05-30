@@ -15,25 +15,26 @@
 
 # Read the input.txt file
 # importing re to find digit in inputfile
+# importing regular expression
 import re
 class SumCalculator:
     def __init__(self, input_file):
         self.input_file = input_file
-        self.input_lines = self.read_input()
-        self.total_sum = self.sum_of_numbers()
+        self.input_lines = self.fetch_input()
+        self.total_sum = self.compute_sum()
      
 #reading the file.txt
-    def read_input(self):
+    def fetch_input(self):
         file = open(self.input_file, "r")
         input_lines = file.readlines()
         return input_lines
     
 
-    def sum_of_numbers(self):
+    def compute_sum(self):
         total_sum = 0
-        for line in self.input_lines:
+        for sent in self.input_lines:
             # Extract digits from the line
-            digits = re.findall(r'\d', line)
+            digits = re.findall(r'\d', sent)
 
             # If the line contains at least two digits
             if len(digits) >= 2:
