@@ -29,6 +29,7 @@ class SumCalculator:
         input_lines = file.readlines()
         return input_lines
     
+
     def compute_sum(self):
         total_sum = 0
         for line in self.input_lines:
@@ -38,6 +39,7 @@ class SumCalculator:
                 num = digits[0] * 10 + digits[-1]
                 print(f"Line '{line}': {digits[0]} * 10 + {digits[-1]} = {num}")
                 total_sum += num
+        print(f"Total sum: {total_sum}")
         return total_sum
     # solution
     def print_solution(self):
